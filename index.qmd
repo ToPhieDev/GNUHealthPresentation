@@ -1,6 +1,6 @@
 ---
-title: "Title"
-subtitle: "Subtitle"
+title: "GNU Health"
+subtitle: "Medizinische Informatik"
 date: now
 date-format: "D. MMMM YYYY"
 format:
