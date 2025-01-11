@@ -11,7 +11,7 @@ format:
     chalkboard:
       buttons: false
     preview-links: auto
-    logo: images/hsh.svg
+    logo: images/gnu-health-logo.svg
     css: styles.css
     footer: Author Name
     theme: serif
