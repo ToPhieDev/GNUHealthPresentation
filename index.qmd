@@ -43,6 +43,35 @@ filters:
 
 ---
 
+# Virtual Box mit Debian
+
+# GNU Health
+
+# LIMS aka Occhiolino
+
+# Mirth Connect
+
+## Installations-Skript
+![image.png](images/mirth/error_red.png)
+
+OK - Probieren wir es nochmal
+
+![image.png](images/mirth/error_white.png)
+
+
+## RPM Package
+::: {.incremental}
+Wie wird das eigentlich benutzt?
+Dokumentation von Debian: One should avoid using .rpm package on a Debian system
+:::
+
+## TAR Package
+::: {.incremental}
+- Runterladen
+- Entpacken
+- Starten
+:::
+
 # First Slide  
 - 1: Write code that works on your machine
 - 2: Break everything on someone else’s machine
