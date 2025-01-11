@@ -54,9 +54,16 @@ filters:
 ## Installations-Skript
 ![image.png](images/mirth/error_red.png)
 
+## Installations-Skript
 OK - Probieren wir es nochmal
 
 ![image.png](images/mirth/error_white.png)
+
+## Installations-Skript
+Jedes Mal sieht es anders aus
+
+Nach dem 5. Mal:
+![img.png](images/mirth/error.png)
 
 
 ## RPM Package
