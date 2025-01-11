@@ -4,13 +4,13 @@ https://quarto.org/docs/get-started/
 ## Render to HTML
 
 ```shell
-quarto render .\slides.qmd
+quarto render .\index.qmd
 ```
 
 ## Show preview in browser
 
 ```shell
-quarto preview .\slides.qmd
+quarto preview .\index.qmd
 ```
 
 ## Open Speaker View
