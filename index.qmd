@@ -168,7 +168,6 @@ Nicht alle Testarten sind vorhanden.
 Diese können manuell angelegt werden.
 
 Beispiel:
-
 - Testart: Knochendichtemessung
 - Testeinheit: SD (Standardabweichung)
 
@@ -193,7 +192,7 @@ Setup:
 1. `python3 -m venv ~/myenv`
 2. `source ~/myenv/bin/activate` 
 3. `pip install "proteus>=6.0,<6.1"` 
-4. `pip install pandas`  <- kein Teil der Anleitung :-(
+4. `pip install pandas` 
 
 ## Testergebnisse importieren
 
