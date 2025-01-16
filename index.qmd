@@ -258,6 +258,8 @@ Quelle: [wiki.debian.org](https://wiki.debian.org/RPM)
 - Entpacken
 - Starten
 
+(3D-Beschleunigung deaktivieren, um schwarzes Flackern / schwarze Fenster zu vermeiden)
+
 ## Auflösung Mirth Connect
 Verbleibendes Problem:
 
