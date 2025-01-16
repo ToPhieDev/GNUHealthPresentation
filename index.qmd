@@ -285,3 +285,21 @@ Ergebnis sichtbar in Datei und im Log im Dashboard
 ✨Bonusaufgabe✨
 :::
 
+::: {.columns}
+
+::: {.column width="50%"}
+![](images/mirth/cross-vm/1.png)
+
+:::
+
+::: {.column width="50%"}
+![](images/mirth/cross-vm/2.png)
+
+:::
+:::
+
+
+
+## Nachricht von VM1 an VM2
+
+![](images/mirth/cross-vm/3.png)
