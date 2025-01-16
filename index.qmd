@@ -75,6 +75,9 @@ cd vbox/
 - Anhand der offiziellen Anleitung
 - Ansible Playbook
 
+::: {.attribution}
+Quelle: [docs.gnuhealth.org](https://docs.gnuhealth.org/ansible/playbooks/gnuhealth.html)
+:::
 
 # GNU Health
 ## Customizing
@@ -119,6 +122,9 @@ Zugriffsberechtigungen: Gesundheitsarzt, Health Administration
 - Bett gewechselt
 ![](images/change_bed.png)
 
+::: {.attribution}
+Quelle: [docs.gnuhealth.org](https://docs.gnuhealth.org/his/userguide/modules/inpatientmanagement.html)
+::: 
 
 ## Das System ausprobieren Teil 2
 - Patient entlassen
@@ -126,6 +132,10 @@ Zugriffsberechtigungen: Gesundheitsarzt, Health Administration
   - Bett gesäubert
   
 ![](images/bett_discharge.png){.r-stretch}
+
+::: {.attribution}
+Quelle: [docs.gnuhealth.org](https://docs.gnuhealth.org/his/userguide/modules/inpatientmanagement.html)
+::: 
 
 # LIMS aka Occhiolino
 
@@ -136,6 +146,12 @@ Zugriffsberechtigungen: Gesundheitsarzt, Health Administration
 3. Für Aktivierung vormerken
 4. Verwaltung → Module → Vorgemerkte Aktivierungen
 5. Aktualisierung starten
+
+
+::: {.attribution}
+Quelle: [docs.gnuhealth.org](https://docs.gnuhealth.org/his/userguide/modules/laboratory.html#gnu-health-lims-laboratory-information-management-system-for-the-healthcare-and-biomedical-sectors)
+:::
+
 
 ## Labor Tests angefragt
 Für alle 6 Patienten:
@@ -180,6 +196,12 @@ Setup:
 3. `pip install "proteus>=6.0,<6.1"` 
 4. `pip install pandas` <- kein Teil der Anleitung :-(
 
+
+::: {.attribution}
+Quelle: [docs.gnuhealth.org](https://docs.gnuhealth.org/his/userguide/modules/laboratory.html#gnu-health-lims-laboratory-information-management-system-for-the-healthcare-and-biomedical-sectors)
+:::
+
+
 ## Testergebnisse importieren
 
 - python Skript aus Repo laden
@@ -191,6 +213,12 @@ python3 gnuhealth-data-import.py
     -H localhost -p 80 
     -u admin -P gnusolidario -d health
 ```
+
+
+::: {.attribution}
+Quelle: [docs.gnuhealth.org](https://docs.gnuhealth.org/his/userguide/modules/laboratory.html#gnu-health-lims-laboratory-information-management-system-for-the-healthcare-and-biomedical-sectors)
+:::
+
 
 ![](images/lab/import.png)
 
@@ -220,6 +248,10 @@ _Wie wird das eigentlich benutzt_?
 **Dokumentation von Debian**: 
 
 > One should avoid using .rpm package on a Debian system
+
+::: {.attribution}
+Quelle: [wiki.debian.org](https://wiki.debian.org/RPM)
+::: 
 
 ## TAR Package
 - Runterladen
