@@ -162,14 +162,58 @@ Für alle 6 Patienten:
 **Kontext:** Kontrolle Blutdruck (I10 - Hypertension)  
 **Tests:** Renal Function Test, Urine Analysis  
 
+## Benötigte fehlende Testarten
+Nicht alle Testarten sind vorhanden.
+
+Diese können manuell angelegt werden.
+
+Beispiel:
+
+- Testart: Knochendichtemessung
+- Testeinheit: SD (Standardabweichung)
+
+## Test erstellen
+![](images/lab/create_test.png)
+
+## Testergebnisse eintragen
+![](images/lab/fill_test.png)
+
+## Testergebnisse anzeigen
+![](images/lab/test_report.png)
+
+## Übersicht aller Tests
+![](images/lab/view_tests.png)
 
 
+## Testergebnisse importieren
+Die Testergebnisse können auch mithilfe einer CSV-Datei eingespielt werden.
+
+Setup:
+
+1. `python3 -m venv ~/myenv`
+2. `source ~/myenv/bin/activate` 
+3. `pip install "proteus>=6.0,<6.1"` 
+4. `pip install pandas`  <- kein Teil der Anleitung :-(
+
+## Testergebnisse importieren
+
+- python Skript aus Repo laden
+- Skript ausführen  
+
+```python
+python3 gnuhealth-data-import.py 
+    -f 4-labtests.csv 
+    -H localhost -p 80 
+    -u admin -P gnusolidario -d health
+```
+
+![](images/lab/import.png)
 
 
 # Mirth Connect
 
 ## Installations-Skript
-![image.png](images/mirth/error_red.png)
+![](images/mirth/error_red.png)
 
 ## Installations-Skript
 OK - Probieren wir es nochmal
