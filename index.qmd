@@ -124,7 +124,7 @@ Zugriffsberechtigungen: Gesundheitsarzt, Health Administration
   - Entlassungsgrund und Diagnose angegeben
   - Bett gesäubert
   
-![](images/bett_discharge.png)
+![](images/bett_discharge.png){.r-stretch}
 
 # LIMS aka Occhiolino
 
@@ -202,7 +202,7 @@ python3 gnuhealth-data-import.py
 ## Installations-Skript
 OK - Probieren wir es nochmal
 
-![image.png](images/mirth/error_white.png)
+![](images/mirth/error_white.png)
 
 ## Installations-Skript
 Jedes Mal sieht es anders aus
