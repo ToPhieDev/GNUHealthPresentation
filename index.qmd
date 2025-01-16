@@ -228,14 +228,60 @@ Nach dem 5. Mal:
 
 
 ## RPM Package
-::: {.incremental}
-Wie wird das eigentlich benutzt?
-Dokumentation von Debian: One should avoid using .rpm package on a Debian system
-:::
+_Wie wird das eigentlich benutzt_?
+
+
+
+**Dokumentation von Debian**: 
+
+> One should avoid using .rpm package on a Debian system
 
 ## TAR Package
-::: {.incremental}
 - Runterladen
 - Entpacken
 - Starten
+
+## Auflösung Mirth Connect
+Verbleibendes Problem:
+
+Anwendung skaliert nicht auf 4k-Monitor.
+
+In GnuHealth war alles gut - in MirthConnect sind Felder jetzt sehr sehr klein.
+
+Lösung: Auflösung in Debian Einstellungen verringern
+
+
+## hl7 -> xml
+Channel anlegen
+![](images/mirth/conversion/1.png)
+![](images/mirth/conversion/2.png)
+
+## hl7 -> xml
+Source
+![](images/mirth/conversion/3.png)
+
+## hl7 -> xml
+Destination
+![](images/mirth/conversion/4.png)
+
+## hl7 -> xml
+Templates füllen
+![](images/mirth/conversion/5.png)
+
+## hl7 -> xml
+Mapping
+![](images/mirth/conversion/6.png)
+
+## hl7 -> xml
+Deployen nicht vergessen
+![](images/mirth/conversion/7.png)
+
+## hl7 -> xml
+Ergebnis sichtbar in Datei und im Log im Dashboard
+![](images/mirth/conversion/8.png)
+
+##  Nachricht von VM1 an VM2
+:::header 
+✨Bonusaufgabe✨
 :::
+
