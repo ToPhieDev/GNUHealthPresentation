@@ -314,3 +314,5 @@ Ergebnis sichtbar in Datei und im Log im Dashboard
 ## Nachricht von VM1 an VM2
 
 ![](images/mirth/cross-vm/3.png){width=800}
+
+# Danke für eure Aufmerksamkeit
