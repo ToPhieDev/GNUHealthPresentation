@@ -6,14 +6,14 @@ date-format: "D. MMMM YYYY"
 format:
   revealjs:
     multiplex: true
-    header: Header Text
+    header: Gnu Health
     slide-number: true
     chalkboard:
       buttons: false
     preview-links: auto
     logo: images/gnu-health-logo.svg
     css: styles.css
-    footer: Author Name
+    footer: Sophie Fürhoff und Tobias Wylega
     theme: serif
     template-partials:
         - title-slide.html
@@ -44,10 +44,127 @@ filters:
 ---
 
 # Virtual Box mit Debian
+## Installation 
+- Anhand der offiziellen Anleitung
+
+::: {.incremental}
+- Probleme mit Root-Rechten 
+  - Statt unbeaufsichtigter Installation: Manuelle Installation
+  - Kein Passwort für Root vergeben
+  - Der nächste angelegte Benutzer erhält automatisch sudo-Rechte
+:::
+
+## Zwischenablage {auto-animate="true"}
+- In VirtualBox "Gasterweiterungen iso" als CD einlegen
+- In Debian:
+
+```bash {code-line-numbers="3"}
+cd /media
+mkdir vbox
+sudo mount /dev/sr0 vbox/
+```
+
+
+## Zwischenablage {auto-animate="true" visibility="uncounted"}
+- In VirtualBox "Gasterweiterungen iso" als CD einlegen
+- In Debian:
+
+```bash {code-line-numbers="4-5"}
+cd /media
+mkdir vbox
+sudo mount /dev/sr0 vbox/
+cd vbox/
+./VBoxLinuxAdditions.run
+```
+
+## Installation auf Mac mit m1
+1. [Server-Image](https://ubuntu.com/download/server/arm) für arm herunterladen
+2. Tastatur einrichten: `sudo dpkg-reconfigure keyboard-configuration`
+3. [GUI](https://thelinuxforum.com/articles/919-how-to-install-gui-on-ubuntu-24-04-server) nachinstallieren
+    - `sudo apt update`
+    - `sudo apt install lightdm`
+    - `sudo apt install ubuntu-desktop`
+4. Zwischenablage benutzen `Control + Shift + C/V`
+
+## Installierung von GNU Health
+- Anhand der offiziellen Anleitung
+- Ansible Playbook
+
 
 # GNU Health
+## Customizing
+- Verschiedene User angelegt
+- Verschiedene Patienten angelegt
+- Für die Patienten:
+  - Termine angelegt
+  - Untersuchungen mit Diagnosen angelegt
+
+## Christine Heppenheimer
+⇒ Ärztin
+Benutzername: `heppenheimer`
+
+Passwort: `christine!`
+
+Zugriffsberechtigungen: Gesundheitsarzt, Health Administration
+
+## Anna Müller
+- **Untersuchungsergebnisse**:
+    - Gewicht: 68 kg
+    - Größe: 1,65 m
+    - Blutdruck: 125/80 mmHg
+    - Blutzucker: 95 mg/dl
+    - Cholesterin: 190 mg/dl
+- **Diagnostizierte Krankheit(en)**:
+    - Leichte Hypertonie
+
+## Anna Müller
+- **Bisherige Termine**:
+    - 29.11.2024: Allgemeine Vorsorgeuntersuchung
+- **Zukünftige Termine**:
+    - 03.12.2024: Nachuntersuchung Blutdruck
+
+## Customizing Teil 2
+- Klinik angelegt, mit Abteilungen und Betten
+- Mitarbeiter den Abteilungen zugeordnet
+- Zugriffsrechte für die Mitarbeiter gesetzt
+
+## Das System ausprobieren
+- Patient aufgenommen und zu Bett zugewiesen
+- Visite durchgeführt
+- Bett gewechselt
+![](images/change_bed.png)
+
+
+## Das System ausprobieren Teil 2
+- Patient entlassen
+  - Entlassungsgrund und Diagnose angegeben
+  - Bett gesäubert
+  
+![](images/bett_discharge.png)
 
 # LIMS aka Occhiolino
+
+## Setup
+
+1. Verwaltung → Module → Module
+2. Öffne das Modul `health_lab`
+3. Für Aktivierung vormerken
+4. Verwaltung → Module → Vorgemerkte Aktivierungen
+5. Aktualisierung starten
+
+## Labor Tests angefragt
+Für alle 6 Patienten:
+
+**Patient:** Anna Müller  
+**Datum:** 03.12.2024  
+**Dringend:** Ja  
+**Arzt:** Christine Heppenheimer  
+**Kontext:** Kontrolle Blutdruck (I10 - Hypertension)  
+**Tests:** Renal Function Test, Urine Analysis  
+
+
+
+
 
 # Mirth Connect
 
@@ -78,120 +195,3 @@ Dokumentation von Debian: One should avoid using .rpm package on a Debian system
 - Entpacken
 - Starten
 :::
-
-# First Slide  
-- 1: Write code that works on your machine
-- 2: Break everything on someone else’s machine
-- 3: Blame the compiler. 
-
-
-## You can change the header
-::: header
-Tabs vs. Spaces: The Eternal Battle
-:::
-
-::: {.columns}
-
-::: {.column width="50%"}
-Left Column: Where all the good code lives.  
-// TODO: Refactor this mess later.
-:::
-
-::: {.column width="50%"}
-Right Column: Definitely not full of commented-out hacks.  
-/* If you're reading this, no you’re not. */
-:::
-
-:::
-
-::: notes
-Hidden from the viewer, but shown in speaker-view (press 's' to open)
-:::
-
-
-## Automatic incremental slides
-::: {.incremental}
-- Press `Space` to see the next point
-- Press `Space` again to see the next point
-- Good job!
-:::
-
-## Manual incremental slides
-
-Is there anything else on this slide?
-
-::: {.fragment}
-Yes there is! <br>
-:o 
-:::
-
-::: {.fragment}
-Surprised?
-:::
-
-
-## Code with highlighted lines {auto-animate="true" visibility="uncounted"}
-```prisma {code-line-numbers="4-5,8-10"}
-model Module {
- id Int @id @default(autoincrement())
- credits             Int
- degreeProgram       DegreeProgram @relation(fields: [degreeProgramId], references: [id])
- degreeProgramId     Int
-...
-
-model DegreeProgram {
-  id                 Int           @id @default(autoincrement())
-  modules            Module[]
-...
-``` 
-
-## Growing / animated code {auto-animate="true"}
-```ts {code-line-numbers="3|4-6|1-2"}
-@ApiTags('Degrees')
-@Controller('degrees')
-export class DegreeController {
-  constructor(
-    private degreeService: DegreeService
-  ) {}
-```
-## Growing / animated code  {auto-animate="true" visibility="uncounted"}
-```ts {code-line-numbers="8-10"}
-@ApiTags('Degrees')
-@Controller('degrees')
-export class DegreeController {
-  constructor(
-    private degreeService: DegreeService
-  ) {}
-
-  @Get(':id')
-  findOne(@Param('id') id: string, @Req() request: Request): Promise<any> {
-  }
-}
-```
-
-
-## Tables
-<br>
-
-|                  | Bootstrap  | PrimeNG  |
-|------------------|--------|--------|
-| Weekly Downloads | 424,283   | 355,443   |
-| ...              | ...   | ...   |
-| Component count  | ~25   | ~100   |
-
-
-
-
-## Mermaid Diagrams
-
-```{mermaid}
-pie title When you forget someones name
-    "Wait until someone else says the name" : 80
-    "Guess their name wrong" : 15
-    "Guess their name right" : 4
-    "Ask for the name" : 1
-```
-
-
-## Uncounted slide {visibility="uncounted"}
-![](images/screenshot.jpg)
