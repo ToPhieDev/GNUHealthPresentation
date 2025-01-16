@@ -29,14 +29,15 @@ filters:
 
 # Virtual Box mit Debian
 ## Installation 
-- Anhand der offiziellen Anleitung
 
-::: {.incremental}
+- ISO-Datei herunterladen
+- Virtuelle Maschine erstellen
+- ISO-Datei als CD einlegen
 - Probleme mit Root-Rechten 
   - Statt unbeaufsichtigter Installation: Manuelle Installation
   - Kein Passwort für Root vergeben
   - Der nächste angelegte Benutzer erhält automatisch sudo-Rechte
-:::
+
 
 ## Zwischenablage {auto-animate="true"}
 - In VirtualBox "Gasterweiterungen iso" als CD einlegen
