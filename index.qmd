@@ -120,6 +120,7 @@ Zugriffsberechtigungen: Gesundheitsarzt, Health Administration
 - Patient aufgenommen und zu Bett zugewiesen
 - Visite durchgeführt
 - Bett gewechselt
+
 ![](images/change_bed.png)
 
 ::: {.attribution}
@@ -237,6 +238,7 @@ OK - Probieren wir es nochmal
 Jedes Mal sieht es anders aus
 
 Nach dem 5. Mal:
+
 ![img.png](images/mirth/error.png)
 
 
@@ -272,34 +274,42 @@ Lösung: Auflösung in Debian Einstellungen verringern
 
 ## hl7 -> xml
 Channel anlegen
+
 ![](images/mirth/conversion/1.png)
+
 ![](images/mirth/conversion/2.png)
 
 ## hl7 -> xml
 Source
+
 ![](images/mirth/conversion/3.png)
 
 ## hl7 -> xml
 Destination
+
 ![](images/mirth/conversion/4.png)
 
 ## hl7 -> xml
 Templates füllen
+
 ![](images/mirth/conversion/5.png)
 
 ## hl7 -> xml
 Mapping
+
 ![](images/mirth/conversion/6.png)
 
 ## hl7 -> xml
 Deployen nicht vergessen
+
 ![](images/mirth/conversion/7.png)
 
 ## hl7 -> xml
 Ergebnis sichtbar in Datei und im Log im Dashboard
+
 ![](images/mirth/conversion/8.png)
 
-##  Nachricht von VM1 an VM2
+#  Nachricht von VM1 an VM2
 ##
 :::header 
 ✨Bonusaufgabe✨
