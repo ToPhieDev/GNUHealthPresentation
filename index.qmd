@@ -38,6 +38,10 @@ filters:
   - Kein Passwort für Root vergeben
   - Der nächste angelegte Benutzer erhält automatisch sudo-Rechte
 
+::: {.notes}
+- Debian installiert
+- Probleme bei root-Rechtten ==> daher manuelle Installation
+:::
 
 ## Zwischenablage {auto-animate="true"}
 - In VirtualBox "Gasterweiterungen iso" als CD einlegen
@@ -49,6 +53,10 @@ mkdir vbox
 sudo mount /dev/sr0 vbox/
 ```
 
+::: {.notes}
+- damit Zwischenablage funktioniert musste Gasterweiterung
+- mounten
+:::
 
 ## Zwischenablage {auto-animate="true" visibility="uncounted"}
 - In VirtualBox "Gasterweiterungen iso" als CD einlegen
@@ -62,6 +70,12 @@ cd vbox/
 ./VBoxLinuxAdditions.run
 ```
 
+::: {.notes}
+- damit Zwischenablage funktioniert musste Gasterweiterung
+- mounten
+- und ausführen
+:::
+
 ## Installation auf Mac mit m1
 1. [Server-Image](https://ubuntu.com/download/server/arm) für arm herunterladen
 2. Tastatur einrichten: `sudo dpkg-reconfigure keyboard-configuration`
@@ -70,6 +84,13 @@ cd vbox/
     - `sudo apt install lightdm`
     - `sudo apt install ubuntu-desktop`
 4. Zwischenablage benutzen `Control + Shift + C/V`
+
+::: {.notes}
+- Ubuntu Server Image für ARM heruntergeladen
+- Tastaturkonfiguration angepasst
+- GUI nachinstalliert
+- Zwischenablage wie vorher
+:::
 
 ## Installierung von GNU Health
 - Anhand der offiziellen Anleitung
@@ -139,6 +160,18 @@ Quelle: [docs.gnuhealth.org](https://docs.gnuhealth.org/his/userguide/modules/in
 ::: 
 
 # LIMS aka Occhiolino
+
+::: {.notes}
+- LIMS = Labor Information Management System
+
+**Vorteile fürs Personal:** 
+
+- Open Source  
+- Ablauf zwischen Krankenhaus und Labor abgebildet  
+- Durch Import von Testdaten werden Tippfehler vermieden  
+- Ergebnisse können als PDF exportiert werden (Für Patient z.B.)  
+
+:::
 
 ## Setup
 
